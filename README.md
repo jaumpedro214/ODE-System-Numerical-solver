@@ -114,5 +114,4 @@ You will need Matlab or Octave to run the .m code. Once with Matlab/Octave opene
    ![](https://github.com/jaumpedro214/ODE-System-Numerical-solver/blob/master/Images/SpringSystem_1.png?raw=true)
    
    With Damping
-   
-   ]![](https://github.com/jaumpedro214/ODE-System-Numerical-solver/blob/master/Images/SpringSystem_2.png?raw=true)
+   ![](https://github.com/jaumpedro214/ODE-System-Numerical-solver/blob/master/Images/SpringSystem_2.png?raw=true)
