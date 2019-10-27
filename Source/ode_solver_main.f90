@@ -1,5 +1,11 @@
 program ode_solver
 
+    !============================================================================!
+    !============================ ODE System Solver =============================!
+    !========================= João Pedro da Silva Lima =========================!
+    !====================== joaopedrodasilvalima@gmail.com ======================!
+    !============================================================================!
+
     implicit none
     !Archives ID
     integer output_solution, mash_info
@@ -23,16 +29,24 @@ program ode_solver
     mash_info = 82
     open( unit = mash_info, file = "mash_info.out" )
 
+    !============================ System Size ============================!
     system_size = 1
+
     allocate( k(4,system_size) )
     allocate( old_sol(system_size) )
     allocate( new_sol(system_size) )
 
+    !========================== System variables ==========================!  
     intr_x = 30.000
     nodes_number = 1000
+    !======================================================================!
+
     delta_x = intr_x/(nodes_number-1)
 
+    !======================== Initial conditions ==========================!
     old_sol(1) = 5
+
+    !======================================================================!
 
     write(output_solution,*) old_sol
 
@@ -64,6 +78,7 @@ program ode_solver
         real(8), intent(in), dimension(:) :: u
         real(8), dimension( size(u) ) :: f_res
 
+        !===== function =====!
         f_res(1) = u(1)*( 0.3 - 0.1*u(2) )
 
     end function f
